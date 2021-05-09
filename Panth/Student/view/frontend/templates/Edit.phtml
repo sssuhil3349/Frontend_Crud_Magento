@@ -1,0 +1,32 @@
+<?php
+
+$recod=$block->getEditRecord();
+	$id=$recod['id'];
+	$name=$recod['name'];
+	$last=$recod['last'];
+	$email=$recod['email'];
+
+
+
+
+
+
+?>
+<form method="POST" action="<?php echo $block->getUrl('student/index/save'); ?>" enctype="multipart/form-data">
+  <fieldset>
+	    <legend>Student intion:</legend>
+	    	<input type="hidden" name="id" value="<?php echo $id; ?>" placeholder="Enter Name" required>
+	    <br>
+	    	First Name:<br>
+	    	<input type="text" name="name" minlength="3" value="<?php echo $name; ?>" placeholder="Enter Name" required>
+	    <br>
+	    	Last Name:<br>
+	    	<input type="text" name="last" value="<?php echo $last; ?>" placeholder="Enter Last Name" required>
+	    <br>
+	    	Email:<br>
+	    	<input type="email" name="email" value="<?php echo $email; ?>" placeholder="Enter Email" required>
+	    <br><br>
+	    <br>   
+	    	<input type="submit" value="Submit">
+   </fieldset>
+</form>

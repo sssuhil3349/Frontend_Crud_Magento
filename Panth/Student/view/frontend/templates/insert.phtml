@@ -1,0 +1,17 @@
+
+<form method="POST" action="<?php echo $block->getUrl('student/index/add'); ?>" enctype="multipart/form-data">
+  <fieldset>
+	    <legend>Student intion:</legend>
+	    	First Name:<br>
+	    	<input type="text" name="name" minlength="3" placeholder="Enter First Name" required>
+	    <br>
+	    	Last Name:<br>
+	    	<input type="text" name="last" placeholder="Enter Last Name" required>
+	    <br>
+	    	Email:<br>
+	    	<input type="email" name="email" placeholder="Enter Email" required>
+	    <br><br>
+	    <br>   
+	    	<input type="submit" value="Submit">
+   </fieldset>
+</form>

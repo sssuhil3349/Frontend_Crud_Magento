@@ -1,0 +1,26 @@
+
+<a class="action primary" href="<?php echo $block->getUrl('student/index/insert');?> ">Add Record</a>
+<table border:1px;>
+	<tr>
+		<th>Id</th>
+		<th>First Name</th>		
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Edit</th>
+		<th>Delete</th>
+	</tr>
+ 
+	<?php
+		$collection = $block->getResult();
+		foreach($collection as $item){		
+	?>
+	<tr>
+		<td><?php echo $item->getData('id'); ?></td>
+		<td><?php echo $item->getData('name'); ?></td>
+		<td><?php echo $item->getData('last'); ?></td>
+		<td><?php echo $item->getData('email'); ?></td>
+		<td><a href="<?php echo $block->getUrl('student/index/edit').'?id='.$item->getData('id'); ?>" class="action primary">Edit</a></td>
+		<td><a href="<?php echo $block->getUrl('student/index/delete').'?id='.$item->getData('id'); ?>" class="action primary">Delete</a></td>
+	</tr>
+	<?php } ?>
+</table>
